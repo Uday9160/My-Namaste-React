@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Episode 1</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- HTML code to print hello world -->
+    <div id="html">
+      <h1>Helloo world using html</h1>
+    </div>
+    <!-- JAVASCRIPT code to print hello world -->
+    <div id="javascript"></div>
+
+    <script type="text/javascript">
+      const heading = document.createElement("h1");
+      heading.innerHTML = "Hello world using JavaScript";
+      const root = document.getElementById("javascript");
+      root.appendChild(heading);
+    </script>
+
+    <!-- React code to print Hello world using CDN links -->
+    <div id="react"></div>
+
+    <script type="text/javascript">
+      const h1 = React.createElement(
+        "h1",
+        { className: "heading", id: "heading" },
+        "I am React Heading"
+      );
+      const rooot = ReactDOM.createRoot(document.getElementById("react"));
+      rooot.render(h1); // converting the obj to dom
+      //console.log(h1); // javascript obj ==> React Element
+    </script>
+    <div id="root2"></div>
+    <div id="div">
+      <h1>Hello world using html</h1>
+      will be replaced by react render
+    </div>
+    <script src="./App.js"></script>
+  </body>
+</html>
